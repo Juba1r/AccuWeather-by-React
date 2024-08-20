@@ -8,15 +8,17 @@
 .navbar {
   display: flex;
   align-items: center;
-  width: 68%;
+  width: 65%;
   max-width: 1200px;
   justify-content: space-between;
   padding: 0 20px;
+  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
 }
 
 .navbar-brand {
   display: flex;
   align-items: center;
+  margin-right: auto; /* Aligns to the left */
 }
 
 .navbar-icon {
@@ -39,7 +41,7 @@
 
 .h3-title {
   color: white;
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 500;
   margin-right: 10px;
 }
@@ -53,7 +55,7 @@
   flex-grow: 1;
   display: flex;
   justify-content: flex-end;
-  margin-right: 100px;
+  margin-right: 10px;
 }
 
 .search-input-group {
@@ -120,7 +122,6 @@
 
 .location-dropdown-menu a:hover {
   background-color: #575d63;
-  color: white;
 }
 
 .location-dropdown .location-dropdown-menu {
