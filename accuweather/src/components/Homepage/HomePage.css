@@ -1,78 +1,72 @@
 .homepage-container {
-  height: 100vh; /* Make the container take up the full height of the viewport */
+  display: grid;
+  grid-template-columns: 2fr 1fr; /* 2/3 for the left column, 1/3 for the right */
+  gap: 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.left-column,
+.right-column {
   display: flex;
-  justify-content: center;
-  align-items: center;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.centered-container {
-  text-align: center;
-  max-width: 800px; /* Set a maximum width for the centered container */
-  margin: 0 auto; /* Center the container horizontally */
+.card {
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  padding: 20px;
 }
 
-.card-header {
-  background-color: #f0f0f0;
-  padding: 25px 200px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+.today-weather h2,
+.current-weather h2,
+.top-stories h2 {
+  font-size: 1.5rem;
+  margin-bottom: 15px;
+  color: #333;
+}
+
+.weather-details {
   display: flex;
   justify-content: space-between;
-  align-items: center;
 }
 
-.card-header h2 {
-  font-size: 18px;
+.temperature span {
+  font-size: 3rem;
   font-weight: bold;
-  margin: 0;
 }
 
-.card-header p {
-  font-size: 14px;
-  margin: 0;
-  text-align: right;
+.additional-details p {
+  margin: 5px 0;
 }
 
-.weather-details-card {
-  background-color: #f0f0f0;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
+.top-stories ul {
+  list-style: none;
+  padding: 0;
 }
 
-/* Media queries for responsive design */
+.top-stories li {
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #ccc;
+}
 
-/* Small screens (less than 768px) */
+.top-stories span {
+  font-size: 0.8rem;
+  color: #666;
+}
+
+/* Responsive Styles */
 @media (max-width: 768px) {
-  .centered-container {
-    max-width: 90%; /* Reduce the maximum width for small screens */
+  .homepage-container {
+    grid-template-columns: 1fr; /* Full width for small screens */
   }
-  .card-header {
-    flex-direction: column; /* Stack the header elements vertically on small screens */
-    align-items: center;
-  }
-  .card-header h2 {
-    font-size: 16px; /* Reduce the font size for small screens */
-  }
-  .card-header p {
-    font-size: 12px; /* Reduce the font size for small screens */
-    text-align: center;
-  }
-}
 
-/* Extra small screens (less than 480px) */
-@media (max-width: 480px) {
-  .centered-container {
-    max-width: 95%; /* Reduce the maximum width for extra small screens */
-  }
-  .card-header {
-    padding: 10px; /* Reduce the padding for extra small screens */
-  }
-  .card-header h2 {
-    font-size: 14px; /* Reduce the font size for extra small screens */
-  }
-  .card-header p {
-    font-size: 10px; /* Reduce the font size for extra small screens */
+  .weather-details {
+    flex-direction: column;
+    align-items: center;
   }
 }
