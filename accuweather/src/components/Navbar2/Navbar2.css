@@ -1,27 +1,28 @@
 .secondary-navbar-container {
   background-color: #e4eaf2;
   padding: 10px 0;
+  border-bottom: 2px solid #c0b7b7; /* The bottom border */
+  max-width: 100%; /* Ensure full width across the screen */
+  margin: 0 auto; /* Center the navbar */
 }
 
 .secondary-navbar {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 90%;
   max-width: 1200px;
-  margin: 0 auto;
-  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
-  gap: 15px;
+  margin: 0 135px;
+  gap: 10px;
 }
 
 .secondary-navbar a {
   color: #333;
   text-decoration: none;
-  margin: 0 10px;
+  margin: 0 15px;
   font-size: 1rem;
   font-weight: 500;
   position: relative;
-  padding-bottom: 5px; /* Space for the underline */
+  padding-bottom: 8px; /* Increased padding to make space for the underline */
 }
 
 .secondary-navbar a::after {
@@ -29,7 +30,7 @@
   display: block;
   position: absolute;
   left: 0;
-  bottom: 0;
+  bottom: -2px; /* Position the underline above the border */
   width: 100%;
   height: 2px;
   background-color: transparent; /* Default color */

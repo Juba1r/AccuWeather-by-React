@@ -1,4 +1,8 @@
-.aft-nav {
+.main-container {
   background-color: #e4eaf2;
-  
+}
+
+.content-container {
+  padding: 20px;
+  min-height: calc(100vh - 200px);
 }

@@ -2,7 +2,9 @@
   background-color: #fff;
   color: #645757cf;
   padding: 40px 20px;
-  font-size: 0.9rem;
+  font-size: 0.8rem;
+  display: grid;
+  justify-content: center;
 }
 
 .footer-content {
@@ -77,7 +79,6 @@
   font-weight: 700;
 }
 
-/* Responsive Styles */
 @media (max-width: 768px) {
   .footer-content {
     flex-direction: column;

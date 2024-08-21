@@ -1,16 +1,12 @@
 import "./App.css";
 import "bootstrap/dist/css/bootstrap.min.css";
-import Navbar from "./components/Navbar/Navbar";
-import Navbar2 from "./components/Navbar2/Navbar2";
-import Footer from "./components/Footer/footer";
+import HomePage from "./components/Homepage/homepage";
 
 function App() {
   return (
-    <>
-      <Navbar />
-      <Navbar2 />
-      <Footer />
-    </>
+    <div className="main-container">
+      <HomePage />
+    </div>
   );
 }
 
