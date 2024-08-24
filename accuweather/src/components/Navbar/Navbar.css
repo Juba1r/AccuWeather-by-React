@@ -1,10 +1,16 @@
+/* Navbar Container */
 .navbar-container {
   display: flex;
   justify-content: center;
   background-color: #1f1f1f;
   padding: 10px 0;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  width: 100%;
 }
 
+/* Navbar */
 .navbar {
   display: flex;
   align-items: center;
@@ -12,15 +18,17 @@
   max-width: 1200px;
   justify-content: space-between;
   padding: 0 20px;
-  flex-wrap: wrap; /* Ensure items wrap on smaller screens */
+  flex-wrap: wrap;
 }
 
+/* Navbar Brand */
 .navbar-brand {
   display: flex;
   align-items: center;
-  margin-right: auto; /* Aligns to the left */
+  margin-right: auto;
 }
 
+/* Navbar Icons and Titles */
 .navbar-icon {
   color: orange;
   font-size: 1.5rem;
@@ -33,6 +41,7 @@
   font-weight: 500;
 }
 
+/* Weather Info */
 .weather-info {
   display: flex;
   align-items: center;
@@ -51,6 +60,7 @@
   font-size: 1.2rem;
 }
 
+/* Search Container */
 .search-location-container {
   flex-grow: 1;
   display: flex;
@@ -58,6 +68,7 @@
   margin-right: 10px;
 }
 
+/* Search Input Group */
 .search-input-group {
   display: flex;
   align-items: center;
@@ -65,24 +76,32 @@
   border-radius: 4px;
   padding: 7px 15px;
   position: relative;
+  width: 100%;
+  max-width: 300px;
 }
 
+/* Search Icon */
 .search-icon {
   color: #343a40;
   margin-right: 5px;
 }
 
+/* Search Input */
 .search-input {
   border: none;
   outline: none;
   font-size: 1rem;
-  width: 200px;
+  width: 100%;
+  max-width: 200px;
 }
+
+/* Search Results */
 .search-results {
   background-color: white;
-  border: 1px solid #ccc;
-  border-radius: 4px;
-  margin-top: 5px;
+  /* border: 1px solid #ccc; */
+  /* border-radius: 4px; */
+  margin-top: 130px;
+  margin-left: -15px;
   position: absolute;
   z-index: 1000;
   width: 100%;
@@ -100,6 +119,7 @@
   background-color: #f5f5f5;
 }
 
+/* Location Dropdown */
 .location-dropdown {
   display: flex;
   align-items: center;
@@ -145,10 +165,7 @@
   background-color: #575d63;
 }
 
-.location-dropdown .location-dropdown-menu {
-  display: block;
-}
-
+/* Dropdown Container */
 .dropdown-container {
   position: relative;
   display: flex;
@@ -184,4 +201,58 @@
 
 .dropdown-container:hover .dropdown-menu {
   display: block;
+}
+
+/* Media Queries for Responsiveness */
+@media (max-width: 768px) {
+  .navbar {
+    justify-content: space-between;
+    padding: 10px;
+  }
+
+  .navbar-title {
+    font-size: 1.2rem;
+  }
+
+  .h3-title {
+    font-size: 0.9rem;
+  }
+
+  .search-input-group {
+    width: 100%;
+    max-width: 200px;
+  }
+
+  .search-input {
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar-brand {
+    margin-bottom: 10px;
+  }
+
+  .search-location-container {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+
+  .search-input-group {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .dropdown-container {
+    position: static;
+  }
+
+  .dropdown-menu {
+    min-width: 100%;
+  }
 }

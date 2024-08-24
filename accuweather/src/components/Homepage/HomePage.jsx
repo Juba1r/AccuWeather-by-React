@@ -14,7 +14,6 @@ function HomePage() {
         const response = await fetch(url);
         const data = await response.json();
         setForecastData(data.DailyForecasts[0]);
-        // console.log(data);
       } catch (error) {
         console.error("Error fetching forecast data:", error);
       }
@@ -27,7 +26,6 @@ function HomePage() {
         const response = await fetch(url);
         const data = await response.json();
         setCurrentWeather(data[0]);
-        // console.log(data);
       } catch (error) {
         console.error("Error fetching current weather data:", error);
       }
@@ -110,6 +108,66 @@ function HomePage() {
             ) : (
               <p>Loading...</p>
             )}
+          </div>
+
+          <div className="card weather-radar">
+            <h2>Weather Radar</h2>
+            <div className="radar-container">
+              <img
+                src="https://example.com/radar-image.png"
+                alt="Weather Radar"
+              />
+            </div>
+            <div className="radar-details">
+              <p>Radar Image: {new Date().toLocaleTimeString()}</p>
+            </div>
+          </div>
+
+          <div className="card forecast-card">
+            <h2>10-Day Weather Forecast</h2>
+            <ul className="forecast-list">
+              <li>
+                <span>24/08</span> <span>32°/25°</span> <span>Cloudy</span>{" "}
+                <span>96%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              <li>
+                <span>25/08</span> <span>30°/25°</span> <span>Showers</span>{" "}
+                <span>84%</span>
+              </li>
+              {/* Add more list items here for other days */}
+            </ul>
           </div>
         </div>
 
