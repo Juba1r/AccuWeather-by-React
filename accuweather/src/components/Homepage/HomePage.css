@@ -22,26 +22,85 @@
   padding: 20px;
 }
 
-.today-weather h2,
-.current-weather h2,
-.top-stories h2 {
-  font-size: 1.5rem;
-  margin-bottom: 15px;
+/* Today's Weather Styling */
+.today-weather {
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.today-weather h2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 0.9rem;
   color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+}
+
+/* Current Weather Styling */
+.current-weather {
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  position: relative; /* For positioning the time */
+}
+
+.current-weather h2 {
+  font-size: 0.9rem;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .weather-details {
-  display: flex;
-  justify-content: space-between;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
 }
 
 .temperature span {
   font-size: 3rem;
   font-weight: bold;
+  display: block;
+}
+
+.weather-icon {
+  width: 50px; /* Adjust size if needed */
+  height: auto;
+  margin-right: 10px;
 }
 
 .additional-details p {
   margin: 5px 0;
+}
+
+.current-weather .time {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 0.9rem;
+  color: #666; /* Change the color if necessary */
+}
+
+/* Top Stories Styling */
+.top-stories {
+  padding: 20px;
+  background-color: #f7f9fc;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.top-stories h2 {
+  font-size: 1.2rem;
+  color: #333;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 10px;
+  margin-bottom: 15px;
 }
 
 .top-stories ul {
@@ -67,7 +126,12 @@
   }
 
   .weather-details {
-    flex-direction: column;
-    align-items: center;
+    grid-template-columns: 1fr; /* Stack the details vertically */
+  }
+
+  .current-weather .time {
+    top: 5px; /* Adjust position for smaller screens */
+    right: 10px;
+    font-size: 0.8rem; /* Adjust the font size if needed */
   }
 }
